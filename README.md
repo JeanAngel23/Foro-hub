@@ -20,7 +20,7 @@ Este proyecto es el back-end de un Foro donde los usuarios puedan interactuar en
 # Tecnologias Utilizadas
 - Java
 - MySql
-- 
+- [JWT](https://jwt.io/)
 
 
 

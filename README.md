@@ -125,7 +125,7 @@ El Metodo Delete utiliza un tipo de Delete logico en la base de datos por lo cua
 - Java
 - MySql
 - [JWT](https://jwt.io/)
-- [Spring](https://start.spring.io/).
+- [Spring](https://start.spring.io/)
 
 
 

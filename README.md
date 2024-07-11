@@ -42,6 +42,16 @@ Solo los usuarios autenticados pueden acceder a los endpoints protegidos, donde 
 
 # Funciones
 
+La API Rest cumple con los siguientes requerimientos:
+- Crear un nuevo Topico✅
+- Actualizar un Topico existente✅
+- Eliminar un Topico existente✅
+- Muestras los Topicos activos en la Base de Datos✅
+- Registro, ingreso y salida de usuarios✅
+- Autenticación usando JSON Web Tokens (JWT)✅
+- Contraseñas encriptadas con BCrypt)✅
+- Manejo excepciones con mensajes personalizados✅
+
 Todas las funcionescon el siguiente Http:
 ```http
 http://localhost:8080/
@@ -115,6 +125,7 @@ El Metodo Delete utiliza un tipo de Delete logico en la base de datos por lo cua
 - Java
 - MySql
 - [JWT](https://jwt.io/)
+- [Spring](https://start.spring.io/).
 
 
 

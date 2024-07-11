@@ -40,6 +40,75 @@ Si el token es válido, se autentica al usuario y se configura el contexto de se
 Solo los usuarios autenticados pueden acceder a los endpoints protegidos, donde se permite el acceso público solo al endpoint /login y se requiere autenticación para cualquier otra petición.
 
 
+# Funciones
+
+Todas las funcionescon el siguiente Http:
+```http
+http://localhost:8080/
+```
+
+
+| Endpoint | Metodo     | Descripcion                |
+| :-------- | :------- | :------------------------- |
+| `/login` | `Post` |   Inicio de sesion para el  usuario |
+
+**Tipo de Json**.
+
+```http
+{
+	"login": "pablo.login",
+	"clave" : "contraseña"
+}
+```
+
+
+| Endpoint | Metodo     | Descripcion                |
+| :-------- | :------- | :------------------------- |
+| `/topicos` | `Put` | Actualiza un topico ya existente |
+
+**Tipo de Json.**
+
+```http
+{
+"id": "3",
+"titulo": "Error en la creacion de un JWT"
+}
+
+```
+
+
+| Endpoint | Metodo     | Descripcion|
+| ------- | :------- | :-----------|
+| `/topicos/6`      | `Delete` | El numero **6** hace referencia al id del topico que se desea eliminar, no es necesario utilizar un Json |
+
+
+El Metodo Delete utiliza un tipo de Delete logico en la base de datos por lo cual el topico no se eliminara de la base de datos, sin embargo se desactivara para ser visible por los demas usuarios
+
+
+
+| Endpoint | Metodo     | Descripcion                |
+| :-------- | :------- | :------------------------- |
+| `/topicos` | `GET` | Con este metodo podemos ver todos los topicos activos en la base de datos |
+
+| Endpoint | Metodo     | Descripcion                |
+| :-------- | :------- | :------------------------- |
+| `/topicos` | `Post` | Con este metodo podemos registrar un nuevo topico a la base de datos |
+
+
+**Tipo de Json.**
+
+```http
+{
+    "mensaje": "No puedo crear un JWT",
+	"titulo": "Error en los metodos del video",
+    "status": "true",
+    "nombreCurso": "JAVA",
+	"autor": "Pablo"
+}
+
+```
+
+
 
 
 # Tecnologias Utilizadas

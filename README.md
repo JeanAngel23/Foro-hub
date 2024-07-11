@@ -15,6 +15,31 @@ Oracle Next Education - Proyecto final de la formación de Backend con Java
 Este proyecto es el back-end de un Foro donde los usuarios puedan interactuar entre ellos, hacer preguntas y realizar respuestas. Desarrollado en Java y Spring Boot utilizando un JWT para autenticar el login de los usuarios antes de poder interactuar con la aplicacion
 
 
+# Autenticación
+
+La autenticación en ForoHub se maneja mediante JSON Web Tokens (JWT). Aquí se describe el flujo de autenticación:
+
+- Inicio de Sesión:
+
+El usuario envía sus credenciales (nombre de usuario y contraseña) al endpoint /login.
+El controlador recibe estas credenciales y crea un objeto de autenticación.
+Posteriormente se autentica al usuario. Si la autenticación es exitosa, se genera un token JWT.
+
+- Generación del Token JWT:
+
+El JWT utiliza un algoritmo HMAC256.
+El token incluye el login del usuario como sujeto, su id y una fecha de expiración de 2 horas.
+
+- Autorización de Peticiones:
+
+Para acceder a otros endpoints protegidos, el cliente debe incluir el token JWT en el encabezado Authorization de sus peticiones HTTP.
+Si el token es válido, se autentica al usuario y se configura el contexto de seguridad.
+
+- Endpoints Protegidos:
+
+Solo los usuarios autenticados pueden acceder a los endpoints protegidos, donde se permite el acceso público solo al endpoint /login y se requiere autenticación para cualquier otra petición.
+
+
 
 
 # Tecnologias Utilizadas
